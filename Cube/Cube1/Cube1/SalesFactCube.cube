@@ -1,0 +1,217 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d7882db1-f0e6-4622-bb45-dd37cc17a7ab" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SalesFactCube</ID>
+  <Name>SalesFactCube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="8710e57e-1ed7-4d41-9be0-d3a5a938281c">
+      <ID>Medicine Dimension 1</ID>
+      <Name>Medicine Dimension 1</Name>
+      <DimensionID>Medicine Dimension 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2f2a4c79-2e6c-43ef-977d-6c79323c388e">
+          <AttributeID>Medicine Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d6052d74-fb52-4234-999a-1383c14f5ac0">
+      <ID>Staff Dimension 1</ID>
+      <Name>Staff Dimension 1</Name>
+      <DimensionID>Staff Dimension 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f84d2264-6063-486d-86c4-8debab92be2d">
+          <AttributeID>Staff Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="35952415-a888-43d0-a76d-377e80807823">
+      <ID>Customer Dimension 1</ID>
+      <Name>Customer Dimension 1</Name>
+      <DimensionID>Customer Dimension 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="67288fd6-d99b-484b-8f61-e7fce1b8a3f3">
+          <AttributeID>Customer Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="963d162a-44ab-4bbb-8190-903e643777db">
+      <ID>Time Dimension</ID>
+      <Name>Time Dimension</Name>
+      <DimensionID>Time Dimension</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5485f785-3039-48ed-bcab-372d70006c07">
+          <AttributeID>Time Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="b1e806df-db32-499c-954d-007624071d00">
+      <ID>Sales Fact</ID>
+      <Name>Sales Fact</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7268b3b1-02bc-42d7-866b-6a924963f392">
+          <ID>Sales Transaction</ID>
+          <Name>Sales Transaction</Name>
+          <Source dwd:design-time-name="36596c71-3c45-4d20-8da2-09ce5adfedf2">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e0856d9a-d0b9-4fac-a01e-d4848f2bfbe2">
+              <TableID>dbo_SalesFact</TableID>
+              <ColumnID>Sales_x0020_Transaction</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e43bce0f-8ecf-45fb-9bba-89d271f8d43c">
+          <ID>Medicine Sold</ID>
+          <Name>Medicine Sold</Name>
+          <Source dwd:design-time-name="4af8e65b-637d-475d-a4c0-4e85e1620703">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6cb4e13c-3795-4c22-8467-998b1d460e5e">
+              <TableID>dbo_SalesFact</TableID>
+              <ColumnID>Medicine_x0020_Sold</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fd1932b6-9151-4f1e-8bdd-644e00b729b7">
+          <ID>Sales Fact Count</ID>
+          <Name>Sales Fact Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c24581c5-b20a-4859-adc9-a4de28038136">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="c441ebe5-66f0-4036-aaf0-eebd0553415b">
+              <TableID>dbo_SalesFact</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8b64963f-35e1-466f-8b73-79ccce2e6f2f">
+          <CubeDimensionID>Medicine Dimension 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="99da1d28-8ec9-450c-a1d2-ec97810b343c">
+              <AttributeID>Medicine Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="001f9c26-871c-4b40-be54-2522fc5e1796">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f29911d0-830f-4efd-9ddf-bbeed838fa48">
+                    <TableID>dbo_SalesFact</TableID>
+                    <ColumnID>MedicineCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="341e5f58-3244-4f47-96a3-4256d0afafb5">
+          <CubeDimensionID>Staff Dimension 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6b42e6a8-eb44-42f1-81d9-48b79f919efd">
+              <AttributeID>Staff Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4be00b06-f9df-4337-a43f-5cde0a69798f">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e67a85ab-d9b0-4689-ae32-5351744621e0">
+                    <TableID>dbo_SalesFact</TableID>
+                    <ColumnID>StaffCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e5b5b19d-ff9b-4d64-9093-cf546a3ba9f8">
+          <CubeDimensionID>Customer Dimension 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="772b5fac-c4e0-4961-91b6-4f8669be8fad">
+              <AttributeID>Customer Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="298f394e-abcc-40a9-861d-4d6f8a8cfed0">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c6dbc26f-5f54-46cd-a2e6-25a0a0716cc2">
+                    <TableID>dbo_SalesFact</TableID>
+                    <ColumnID>CustomerCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="79607ecc-cb16-468b-86c7-83a5d0bb1a8c">
+          <CubeDimensionID>Time Dimension</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4071b9b9-7aaf-457a-a9cf-de3e3f0eb626">
+              <AttributeID>Time Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9f5ef935-2b09-40c1-b251-541402ca64d2">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9178a882-d1c1-4377-b4d6-9105fb0526f0">
+                    <TableID>dbo_SalesFact</TableID>
+                    <ColumnID>TimeCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="52e14c26-de96-4d01-a58e-10a5093f4cee">
+    <DataSourceViewID>Hospital IEOLAP</DataSourceViewID>
+  </Source>
+</Cube>

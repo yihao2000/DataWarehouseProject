@@ -1,0 +1,116 @@
+Analisa
+- Measurement
+============================================
+	Total Sales Earning = SUM(Quantity * MedicineSellingPrice)
+	Medicine Sold = SUM(Quantity)
+
+	Total Purchase Cost SUM(Quantity * MedicineBuyingPrice)
+	Medicine Purchased = SUM(Quantity)
+
+	Total Subscription Earning = SUM(BenefitPrice)
+	Subscriber Total = COUNT(SubscriptionID)
+
+	Total Service Earning = SUM(Quantity * TreatmentPrice)
+	Number of Doctor = COUNT(DoctorID)
+
+- Dimension
+============================================
+	Medicine Dimension
+	- MedicineCode
+	- MedicineID
+	- MedicineName
+	- MedicineSellingPrice -> Historical
+	- MedicineBuyingPrice -> Historical
+	- MedicineExpiredDate
+
+	Doctor Dimension
+	- DoctorCode
+	- DoctorID
+	- DoctorName
+	- DoctorDOB
+	- DoctorSalary -> Historical
+	- DoctorAddress -> Changing
+	- ValidFrom
+	- ValidTo
+
+	StaffDimension
+	- StaffCode
+	- StaffID
+	- StaffName
+	- StaffDOB
+	- StaffSalary -> Historical
+	- StaffAddress -> Changing
+	- ValidFrom
+	- ValidTo
+
+	CustomerDimension
+	- CustomerCode
+	- CustomerID
+	- CustomerName
+	- CustomerAddress -> Changing
+	- CustomerGender -> Derived
+
+	BenefitDimension
+	- BenefitCode
+	- BenefitID
+	- BenefitName
+	- BenefitPrice -> Historical
+	- ValidFrom
+	- ValidTo
+
+	TreatmentDimension
+	- TreatmentCode
+	- TreatmentID
+	- TreatmentName
+	- TreatmentPrice -> Historical
+	- ValidFrom
+	- ValidTo
+
+	DistributorDimension
+	- DistributorCode
+	- DistributorID
+	- DistributorName
+	- DistributorAddress -> Changing
+	- CityName
+	- DistributorPhone -> Changing
+
+	TimeDimension
+	- TimeCode
+ 	- Date
+	- Month
+	- Quarter
+	- Year
+
+- Fact
+============================================
+	SalesFact
+	- MedicineCode
+	- StaffCode
+	- CustomerCode
+	- TimeCode
+	- Sales Transaction = SUM(Quantity * MedicineSellingPrice)
+	- Medicine Sold = SUM(Quantity)
+
+	PurchaseFact
+	- MedicineCode
+	- StaffCode
+	- DistributorCode
+	- TimeCode
+	- Purchase Transaction = SUM(Quantity * MedicineBuyingPrice)
+	- Medicine Purchased = SUM(Quantity)
+
+	SubscriptionFact
+	- CustomerCode
+	- StaffCode
+	- BenefitCode
+	- TimeCode
+	- Subscription Earning = SUM(BenefitPrice)
+	- Subscriber Total = COUNT(SubscriptionID)
+
+	ServiceFact
+	- CustomerCode
+	- TreatmentCode
+	- DoctorCode
+	- TimeCode
+	- Service Earning = SUM(Quantity * TreatmentPrice)
+	- Number of Doctor = COUNT(DoctorID)
